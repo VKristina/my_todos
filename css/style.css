@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap");
+
+/* Очищення стандартних відступів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #833ab4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fcb045,
+    #fd1d1d,
+    #833ab4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fcb045,
+    #fd1d1d,
+    #833ab4
+  ); 
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  min-height: 100vh;
+}
+
+/* Заголовок сайту */
+header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 5px #8b0000;
+}
+
+/* Заголовок і форма додавання справ */
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Поле форми введення і кнопка */
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+/* Кнопка форми */
+form button {
+  color: #fd1d1d;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Наведення на Кнопку форми */
+form button:hover {
+  background: #fd1d1d;
+  color: white;
+}
+
+/* Фільтер виконання справ */
+.filter-todo {
+  padding: 1rem;
+}
+
+/* Стандартний елемент select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  background-image: none;
+  color: #ff512f;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/* Клас .select */
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Стрілка вниз */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff512f;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+/* Контейнер для Списку справ */
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Список справ */
+.todo-list {
+  min-width: 50%;
+  list-style: none;
+}
+
+/* Контейнер для елементу списку */
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+/* Елемент списку */
+.todo li {
+  flex: 1;
+}
+
+/* Внутрішній відступ елементу списку */
+.todo-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* Кнопки: виконано, видалити */
+.complete-btn,
+.trash-btn {
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Кнопка виконано */
+.complete-btn {
+  background: #02aab0;
+}
+
+/* Виконана справа */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Кнопка видалити */
+.trash-btn {
+  background: #ff512f;
+}
+
+/* Іконки: видалити, виконано */
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+/* Анімація видалення */
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
